@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/lay_indonesia_raya"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_indonesia_raya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/qarmic_sans_abridged"
+            android:background="@android:color/transparent"
+            android:gravity="start|center_vertical"
+            android:text="Indonesia Raya"
+            android:textAllCaps="false"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_anchor="@+id/btn_indonesia_raya"
+            app:layout_anchorGravity="end|center" />
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/lay_mengheningkan_cipta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_indonesia_raya"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_hymne_pahlawan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/qarmic_sans_abridged"
+            android:background="@android:color/transparent"
+            android:gravity="start|center_vertical"
+            android:text="Hymne Pahlawan(Mengheningkan Cipta)"
+            android:textAllCaps="false"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_anchor="@+id/btn_hymne_pahlawan"
+            app:layout_anchorGravity="end|center" />
+    </android.support.design.widget.CoordinatorLayout>
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/lay_garuda_pancasila"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_mengheningkan_cipta"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_garuda_pancasila"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/qarmic_sans_abridged"
+            android:background="@android:color/transparent"
+            android:gravity="start|center_vertical"
+            android:text="Garuda Pancasila"
+            android:textAllCaps="false"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_anchor="@+id/btn_garuda_pancasila"
+            app:layout_anchorGravity="end|center" />
+    </android.support.design.widget.CoordinatorLayout>
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/lay_bangun_pemuda_pemudi_indonesia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_garuda_pancasila"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_bangun_pemuda_pemudi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/qarmic_sans_abridged"
+            android:background="@android:color/transparent"
+            android:gravity="start|center_vertical"
+            android:text="Bangun Pemudi Pemuda"
+            android:textAllCaps="false"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_anchor="@+id/btn_bangun_pemuda_pemudi"
+            app:layout_anchorGravity="end|center" />
+    </android.support.design.widget.CoordinatorLayout>
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/lay_hari_merdeka"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_bangun_pemuda_pemudi_indonesia"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_hari_merdeka"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/qarmic_sans_abridged"
+            android:background="@android:color/transparent"
+            android:gravity="start|center_vertical"
+            android:text="Hari Merdeka"
+            android:textAllCaps="false"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_anchor="@+id/btn_hari_merdeka"
+            app:layout_anchorGravity="end|center" />
+    </android.support.design.widget.CoordinatorLayout>
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/lay_gugur_bunga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_hari_merdeka"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_gugur_bunga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/qarmic_sans_abridged"
+            android:background="@android:color/transparent"
+            android:gravity="start|center_vertical"
+            android:text="Gugur Bunga"
+            android:textAllCaps="false"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_anchor="@+id/btn_gugur_bunga"
+            app:layout_anchorGravity="end|center" />
+    </android.support.design.widget.CoordinatorLayout>
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/lay_indonesia_pusaka"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_gugur_bunga"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_indonesia_pusaka"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/qarmic_sans_abridged"
+            android:background="@android:color/transparent"
+            android:gravity="start|center_vertical"
+            android:text="Indonesia Pusaka"
+            android:textAllCaps="false"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_anchor="@+id/btn_indonesia_pusaka"
+            app:layout_anchorGravity="end|center" />
+    </android.support.design.widget.CoordinatorLayout>
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/lay_tanah_airku"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_indonesia_pusaka"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_tanah_airku"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/qarmic_sans_abridged"
+            android:background="@android:color/transparent"
+            android:gravity="start|center_vertical"
+            android:text="Tanah Airku"
+            android:textAllCaps="false"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_anchor="@+id/btn_tanah_airku"
+            app:layout_anchorGravity="end|center" />
+    </android.support.design.widget.CoordinatorLayout>
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/lay_berkibarlah_benderaku"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_tanah_airku"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_berkibarlah_benderaku"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/qarmic_sans_abridged"
+            android:background="@android:color/transparent"
+            android:gravity="start|center_vertical"
+            android:text="Berkibarlah Benderaku"
+            android:textAllCaps="false"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_anchor="@+id/btn_berkibarlah_benderaku"
+            app:layout_anchorGravity="end|center" />
+    </android.support.design.widget.CoordinatorLayout>
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/lay_bagimu_negeri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_berkibarlah_benderaku"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_bagimu_negeri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/qarmic_sans_abridged"
+            android:background="@android:color/transparent"
+            android:gravity="start|center_vertical"
+            android:text="Bagimu Negeri"
+            android:textAllCaps="false"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_anchor="@+id/btn_bagimu_negeri"
+            app:layout_anchorGravity="end|center" />
+    </android.support.design.widget.CoordinatorLayout>
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/lay_maju_tak_gentar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_bagimu_negeri"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_maju_tak_gentar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/qarmic_sans_abridged"
+            android:background="@android:color/transparent"
+            android:gravity="start|center_vertical"
+            android:text="Maju Tak Gentar"
+            android:textAllCaps="false"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_anchor="@+id/btn_maju_tak_gentar"
+            app:layout_anchorGravity="end|center" />
+    </android.support.design.widget.CoordinatorLayout>
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/lay_syukur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_maju_tak_gentar"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_syukur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/qarmic_sans_abridged"
+            android:background="@android:color/transparent"
+            android:gravity="start|center_vertical"
+            android:text="Syukur"
+            android:textAllCaps="false"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_anchor="@+id/btn_syukur"
+            app:layout_anchorGravity="end|center" />
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>

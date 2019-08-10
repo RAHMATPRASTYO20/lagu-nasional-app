@@ -1,0 +1,41 @@
+{
+  "project_info": {
+    "project_number": "33043041509",
+    "firebase_url": "https://lagu-kebangsaan-indonesia.firebaseio.com",
+    "project_id": "lagu-kebangsaan-indonesia",
+    "storage_bucket": "lagu-kebangsaan-indonesia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33043041509:android:3fa788b13ee9ba85",
+        "android_client_info": {
+          "package_name": "simamat.lagukebangsaan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "33043041509-7gslelr4a9h0o5huiqknu5n4vma2ams9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHDOFwOurxIHjZaOH8wREDVWSj6VlK12s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "33043041509-7gslelr4a9h0o5huiqknu5n4vma2ams9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-9562521857847508~8940875853"
+    }
+  ],
+  "configuration_version": "1"
+}

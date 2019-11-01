@@ -13,6 +13,13 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/white</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/qarmic_sans_abridged</item>
+    </style>
+
+    <style name="HeaderTitleStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/qarmic_sans_abridged</item>
     </style>
 
 </resources>

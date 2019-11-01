@@ -26,23 +26,15 @@
             android:textColor="@color/white"
             android:textSize="28dp" />
     </android.support.v7.widget.Toolbar>
-
-    <ScrollView
+    <ListView
+        android:id="@+id/rv_judul_catalog"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_below="@id/toolbar"
-        tools:context=".ScrollingActivity"
-        tools:showIn="@layout/activity_main">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <include
-                android:id="@+id/content_judul_lagu"
-                layout="@layout/list_judul"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </RelativeLayout>
-    </ScrollView>
+        android:layout_above="@+id/adView"
+        android:layout_margin="4dp"/>
+
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
         android:layout_width="match_parent"

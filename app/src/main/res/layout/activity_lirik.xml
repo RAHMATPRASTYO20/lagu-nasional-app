@@ -1,94 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LirikActivity"
-    android:background="@drawable/bg_lirik_lagu">
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_above="@id/adView">
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:fitsSystemWindows="true"
+            android:background="@android:color/transparent">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:contentScrim="?attr/colorPrimary"
+                android:fitsSystemWindows="true">
+
+                <WebView
+                    android:id="@+id/videoWebView"
+                    app:layout_collapseMode="parallax"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:clipToPadding="false"
+            android:layout_above="@id/adView"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <LinearLayout
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_marginTop="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="20dp">
-
-                <TextView
-                    android:id="@+id/tv_judul_lagu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="Judul Lagu"
-                    android:textStyle="bold"
-                    android:textSize="18dp"
-                    android:textColor="@color/colorPrimary"
-                    android:fontFamily="@font/qarmic_sans_abridged" />
-
-                <TextView
-                    android:id="@+id/tv_pencipta_lagu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="Pencipta"
-                    android:textStyle="italic"
-                    android:textSize="14dp"
-                    android:fontFamily="@font/qarmic_sans_abridged"/>
-
-                <TextView
-                    android:id="@+id/tv_lirik_lagu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Lirik Lagu"
-                    android:textSize="16dp"
-                    android:textStyle="normal"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/qarmic_sans_abridged"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="start|bottom"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal"
-                android:gravity="start|bottom">
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
 
-                <ImageButton
-                    android:id="@+id/btn_back_activity"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_back_button"
-                    android:padding="10dp"
-                    android:shadowColor="@color/TransparentGrey"
-                    android:shadowDx="3"
-                    android:shadowDy="-3"
-                    android:shadowRadius="1.5"
-                    android:src="@drawable/ic_reply" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <ImageButton
-                    android:id="@+id/btn_play"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="16dp"
-                    android:background="@drawable/bg_youtube"
-                    android:src="@drawable/ic_play_arrow" />
-            </LinearLayout>
-        </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bg_lirik_lagu"
+                        android:layout_gravity="bottom|right"/>
+
+                    <RelativeLayout
+                        android:id="@+id/lay_lirik"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintRight_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/lay_linear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="12dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:fontFamily="@font/qarmic_sans_abridged"
+                                android:text="Pencipta : "
+                                android:textColor="@color/TransparentGrey"
+                                android:textSize="14dp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:id="@+id/tv_pencipta_lagu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:fontFamily="@font/qarmic_sans_abridged"
+                                android:text="Pencipta"
+                                android:textColor="@color/TransparentGrey"
+                                android:textSize="14dp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_below="@id/lay_linear"
+                            android:id="@+id/tv_lirik_lagu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/qarmic_sans_abridged"
+                            android:padding="12dp"
+                            android:text="Lirik"
+                            android:textColor="@color/TransparentGrey"
+                            android:textSize="16dp"
+                            android:textStyle="normal"
+                            android:shadowColor="#ffffff"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="5"/>
+
+                    </RelativeLayout>
+                </FrameLayout>
+            </android.support.v7.widget.CardView>
+        </android.support.v4.widget.NestedScrollView>
     </android.support.design.widget.CoordinatorLayout>
 
-</ScrollView>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_iklan" />
+
+</RelativeLayout>

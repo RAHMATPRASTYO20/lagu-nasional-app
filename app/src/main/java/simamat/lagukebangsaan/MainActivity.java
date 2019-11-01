@@ -21,12 +21,10 @@ import simamat.lagukebangsaan.database.DatabaseAccess;
 
 public class MainActivity extends AppCompatActivity {
 
-    private AdView mAdView;
-
     private ListView rvCatalog;
-    private InterstitialAd interstitialAd;
 
-//    public static final int REQUEST_CODE_1 = 1;
+    private AdView mAdView;
+    private InterstitialAd interstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -46,7 +46,7 @@ public class DatabaseAccess {
 
     public List<String> getAllJudul() {
         List<String> list = new ArrayList<>();
-        Cursor cursor = sqLiteDatabase.rawQuery("select judul_lagu from lagu", null);
+        Cursor cursor = sqLiteDatabase.rawQuery("select judul_lagu from lagu order by judul_lagu asc", null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             list.add(cursor.getString(0));
@@ -105,5 +105,16 @@ public class DatabaseAccess {
         return buffer.toString();
     }
 
+    public String getUrlVideoKaraoke(String judul) {
+
+        c = sqLiteDatabase.rawQuery("select link_video_karaoke from lagu where judul_lagu = '"+ judul +"'", new String[]{});
+        StringBuffer buffer = new StringBuffer();
+        while (c.moveToNext()) {
+            String linkLagu = c.getString(0);
+            buffer.append(""+linkLagu);
+        }
+
+        return buffer.toString();
+    }
 
 }

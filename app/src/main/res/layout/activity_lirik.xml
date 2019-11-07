@@ -27,7 +27,6 @@
                 app:layout_scrollFlags="scroll|exitUntilCollapsed"
                 app:contentScrim="?attr/colorPrimary"
                 android:fitsSystemWindows="true">
-
                 <WebView
                     android:id="@+id/videoWebView"
                     app:layout_collapseMode="parallax"
@@ -35,14 +34,12 @@
                     android:scaleType="centerCrop"
                     android:layout_width="match_parent"
                     android:layout_height="200dp" />
-
                 <android.support.v7.widget.Toolbar
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     app:layout_collapseMode="pin"
                     app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-
             </android.support.design.widget.CollapsingToolbarLayout>
 
         </android.support.design.widget.AppBarLayout>

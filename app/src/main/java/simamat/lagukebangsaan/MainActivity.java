@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -101,5 +100,4 @@ public class MainActivity extends AppCompatActivity {
         AdRequest interstitialRequest = new AdRequest.Builder().build();
         interstitialAd.loadAd(interstitialRequest);
     }
-
 }

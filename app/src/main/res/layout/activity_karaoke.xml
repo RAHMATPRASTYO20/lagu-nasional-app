@@ -81,7 +81,7 @@
                         app:layout_constraintTop_toBottomOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
-                        <LinearLayout
+                        <RelativeLayout
                             android:id="@+id/lay_linear"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -92,23 +92,24 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
+                                android:layout_alignParentLeft="true"
                                 android:fontFamily="@font/qarmic_sans_abridged"
-                                android:text="Pencipta : "
+                                android:text="(Karoke Version)"
                                 android:textColor="@color/TransparentGrey"
                                 android:textSize="14dp"
                                 android:textStyle="normal" />
 
                             <TextView
-                                android:id="@+id/tv_pencipta_lagu"
+                                android:id="@+id/tv_ketukan_lagu"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
+                                android:layout_alignParentRight="true"
                                 android:fontFamily="@font/qarmic_sans_abridged"
-                                android:text="Pencipta"
                                 android:textColor="@color/TransparentGrey"
                                 android:textSize="14dp"
                                 android:textStyle="normal" />
-                        </LinearLayout>
+                        </RelativeLayout>
 
                         <TextView
                             android:layout_below="@id/lay_linear"

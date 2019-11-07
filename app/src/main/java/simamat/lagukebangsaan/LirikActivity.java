@@ -1,7 +1,9 @@
 package simamat.lagukebangsaan;
 
+import android.content.Context;
 import android.content.Intent;
 
+import android.net.ConnectivityManager;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
@@ -14,7 +16,9 @@ import android.view.WindowManager;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -25,10 +29,11 @@ import com.google.android.gms.ads.InterstitialAd;
 import maes.tech.intentanim.CustomIntent;
 import simamat.lagukebangsaan.database.DatabaseAccess;
 
+import static android.widget.Toast.LENGTH_LONG;
+
 public class LirikActivity extends AppCompatActivity {
 
-    private TextView tvPencipta;
-    private TextView tvLirik;
+    private TextView tvPencipta, tvLirik;
     private WebView wvYouTube;
 
     private FloatingActionButton fabKaraoke;
@@ -78,10 +83,17 @@ public class LirikActivity extends AppCompatActivity {
         tvPencipta.setText(pencipta);
         tvLirik.setText(lirik);
 
-        wvYouTube.getSettings().setJavaScriptEnabled(true);
-        wvYouTube.getSettings().setPluginState(WebSettings.PluginState.ON);
-        wvYouTube.loadUrl("http://www.youtube.com/embed/" + linkLagu + "?autoplay=1&vq=small");
-        wvYouTube.setWebChromeClient(new WebChromeClient());
+        if (adaInternet()) {
+            wvYouTube.getSettings().setJavaScriptEnabled(true);
+            wvYouTube.getSettings().setPluginState(WebSettings.PluginState.ON);
+            wvYouTube.loadUrl("http://www.youtube.com/embed/" + linkLagu + "?autoplay=1&vq=small");
+            wvYouTube.setWebChromeClient(new WebChromeClient());
+        } else {
+            wvYouTube.loadDataWithBaseURL("file:///android_asset/",
+                    "<img src='no_internet.jpg' />",
+                    "text/html", "utf-8", null);
+            Toast.makeText(LirikActivity.this, "Tidak Ada Koneksi Internet!", LENGTH_LONG).show();
+        }
 
         fabKaraoke.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -155,5 +167,10 @@ public class LirikActivity extends AppCompatActivity {
     public void loadInterstitial() {
         AdRequest interstitialRequest = new AdRequest.Builder().build();
         interstitialAd.loadAd(interstitialRequest);
+    }
+
+    private boolean adaInternet(){
+        ConnectivityManager koneksi = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        return koneksi.getActiveNetworkInfo() != null;
     }
 }

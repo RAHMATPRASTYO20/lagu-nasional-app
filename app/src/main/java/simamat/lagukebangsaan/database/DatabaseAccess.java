@@ -93,6 +93,18 @@ public class DatabaseAccess {
         return buffer.toString();
     }
 
+    public String getKetukan(String judul) {
+
+        c = sqLiteDatabase.rawQuery("select ketukan_lagu from lagu where judul_lagu = '"+ judul +"'", new String[]{});
+        StringBuffer buffer = new StringBuffer();
+        while (c.moveToNext()) {
+            String lirikLagu = c.getString(0);
+            buffer.append(""+lirikLagu);
+        }
+
+        return buffer.toString();
+    }
+
     public String getUrlVideo(String judul) {
 
         c = sqLiteDatabase.rawQuery("select link_lagu from lagu where judul_lagu = '"+ judul +"'", new String[]{});
@@ -107,7 +119,7 @@ public class DatabaseAccess {
 
     public String getUrlVideoKaraoke(String judul) {
 
-        c = sqLiteDatabase.rawQuery("select link_video_karaoke from lagu where judul_lagu = '"+ judul +"'", new String[]{});
+        c = sqLiteDatabase.rawQuery("select link_karaoke_lagu from lagu where judul_lagu = '"+ judul +"'", new String[]{});
         StringBuffer buffer = new StringBuffer();
         while (c.moveToNext()) {
             String linkLagu = c.getString(0);

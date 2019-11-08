@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Lagu Kebangsaan</string>
-    <string name="banner_app_id">ca-app-pub-9562521857847508~8940875853</string>
-    <string name="banner_iklan">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_app_id">ca-app-pub-9829101954842136~4671532125</string>
+    <string name="banner_iklan_main">ca-app-pub-9829101954842136/5739758135</string>
+    <string name="banner_iklan_lirik">ca-app-pub-9829101954842136/3228301944</string>
+    <string name="banner_iklan_karaoke">ca-app-pub-9829101954842136/9602138600</string>
 </resources>

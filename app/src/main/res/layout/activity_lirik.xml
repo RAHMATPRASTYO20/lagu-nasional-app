@@ -152,6 +152,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_iklan" />
+        ads:adUnitId="@string/banner_iklan_lirik" />
 
 </RelativeLayout>

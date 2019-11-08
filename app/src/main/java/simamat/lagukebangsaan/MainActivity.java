@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void createInterstitial() {
         interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712"); // Ganti sesuai dengan kode interstitial ads anda
+        interstitialAd.setAdUnitId("ca-app-pub-9829101954842136/9101731721"); // Ganti sesuai dengan kode interstitial ads anda
         loadInterstitial();
     }
 
